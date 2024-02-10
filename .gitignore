@@ -23,9 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # directories
-/src/components/ModalWindow
+
 
 # files
 git-commands.txt
 ./node_modules
-/src/components
+

@@ -1,0 +1,28 @@
+.modal-window {
+	border-radius: 10px;
+	border: 2px solid mediumslateblue;
+	width: fit-content;
+	padding: 30px;
+	position: relative;
+}
+.modal-block {
+	width: 100px;
+	height: 100px;
+}
+
+.open-window-btn {
+	width: fit-content;
+	height: 50px;
+}
+
+.modal-window-img {
+	width: auto;
+	height: 100px;
+}
+
+.close-icon {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	right: 0;
+}
