@@ -5,7 +5,7 @@ import Slide from '../Slide/Slide.jsx'
 import slides from './slides.js'
 
 const Slider = () => {
-	const [activeSlide, setActiveSlide] = useState(1)
+	const [activeSlide, setActiveSlide] = useState(~~(slides.length / 2))
 	console.log('active', activeSlide)
 
 	const clickPevious = () => {
