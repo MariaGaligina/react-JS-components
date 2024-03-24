@@ -11,6 +11,7 @@ $button-size: 40px;
 	gap: 50px;
 	background: #dcddde;
 	border: none;
+	box-sizing: border-box;
 
 	&:hover {
 		background-image: linear-gradient(

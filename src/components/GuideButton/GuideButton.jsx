@@ -3,7 +3,7 @@ import cn from 'classnames'
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa6'
 import classes from './GuideButton.module.scss'
 
-const GuideButton = ({disable, direction, onClick}) => {
+const GuideButton = ({disable, direction, onKeyDown, onMouseDown}) => {
 	return (
 		<button
 			className={cn(
@@ -11,7 +11,8 @@ const GuideButton = ({disable, direction, onClick}) => {
 				direction ? classes.direction : '',
 				disable ? classes.disable : ''
 			)}
-			onClick={onClick}>
+			onKeyDown={onKeyDown}
+			onMouseDown={onMouseDown}>
 			{direction === 'next' ? <FaChevronRight /> : <FaChevronLeft />}
 		</button>
 	)

@@ -1,13 +1,14 @@
 $slide-width: 150px;
-$slide-height: 120px;
+$slide-height: 25vh;
 
 .slide {
 	border: solid grey 1px;
 	border-radius: 10%;
-	width: $slide-width;
+	//width: $slide-width;
 	height: $slide-height;
-	object-fit: cover;
+	//object-fit: cover;
 	margin: auto 0;
+	flex-grow: 1;
 	img {
 		object-fit: cover;
 		width: 100%;
@@ -15,7 +16,8 @@ $slide-height: 120px;
 		border-radius: inherit;
 	}
 	&.active {
-		width: calc($slide-width * 1.2);
-		height: calc($slide-height * 1.2);
+		//width: calc($slide-width * 1.2);
+		height: calc($slide-height * 1.3);
+		flex-grow: 3;
 	}
 }

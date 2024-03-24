@@ -34,31 +34,12 @@ $gap: 20px;
 	margin: 0;
 }
 
-$slide-width: 150px;
-$slide-height: 120px;
-
 .slides {
+	border: 1px solid red;
+	width: 60vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
 	gap: 5px;
-}
-
-.slide {
-	border: solid grey 1px;
-	width: $slide-width;
-	height: $slide-height;
-	object-fit: cover;
-	margin: auto 0;
-	img {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
-	&.active {
-		width: calc($slide-width * 1.2);
-		height: calc($slide-height * 1.2);
-	}
-	//background: rgb(231, 167, 231);
 }

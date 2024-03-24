@@ -9,14 +9,30 @@ const Slider = () => {
 	console.log('active', activeSlide)
 
 	const clickPevious = () => {
-		console.log('cl', activeSlide)
 		activeSlide ? setActiveSlide(activeSlide - 1) : setActiveSlide(activeSlide)
+		console.log('clickprev', activeSlide)
 	}
 
 	const clickNext = () => {
 		!(activeSlide === slides.length - 1)
 			? setActiveSlide(activeSlide + 1)
 			: setActiveSlide(activeSlide)
+		console.log('clicknext', activeSlide)
+	}
+
+	const onKeyDown = (event) => {
+		console.log('key', event.key)
+		event.preventDefault()
+		switch (event.key) {
+			case 'ArrowLeft':
+				clickPevious()
+				return
+			case 'ArrowRight':
+				clickNext()
+				return
+			default:
+				return
+		}
 	}
 
 	return (
@@ -29,11 +45,17 @@ const Slider = () => {
 			</div>
 
 			<div className={classes.movements}>
-				<GuideButton disable={activeSlide === 0} direction={'previous'} onClick={clickPevious} />
+				<GuideButton
+					disable={activeSlide === 0}
+					direction={'previous'}
+					onKeyDown={onKeyDown}
+					onMouseDown={clickPevious}
+				/>
 				<GuideButton
 					disable={activeSlide === slides.length - 1}
 					direction={'next'}
-					onClick={clickNext}
+					onKeyDown={onKeyDown}
+					onMouseDown={clickNext}
 				/>
 			</div>
 		</div>
